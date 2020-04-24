@@ -1,0 +1,35 @@
+<xml xmlns="https://developers.google.com/blockly/xml"><variables><variable type="KIND_SpriteKind" id="FU*=lcp#Adb=T:.p#l+S">Player</variable><variable type="KIND_SpriteKind" id="~)rX2wt.s(=K*+cKz}BM">Projectile</variable><variable type="KIND_SpriteKind" id=",3z?)MWg@)14z|YEiqYE">Food</variable><variable type="KIND_SpriteKind" id="gd!E|9C9uX:;qvCGi@p.">Enemy</variable><variable id="Wipg4-cd);a]ovZ6LlfN">mySprite</variable><variable id="CO{]WI|*?w=M(yPk]-j=">projectile</variable><variable id="r].*KtsuY81{s^c,Gqfb">picture</variable></variables><block type="pxt-on-start" x="0" y="0"><statement name="HANDLER"><block type="gamesetbackgroundcolor"><value name="color"><shadow type="colorindexpicker"><field name="index">13</field></shadow></value><next><block type="variables_set"><field name="VAR" id="Wipg4-cd);a]ovZ6LlfN">mySprite</field><value name="VALUE"><shadow xmlns="http://www.w3.org/1999/xhtml" type="math_number"><field name="NUM">0</field></shadow><block type="spritescreate"><value name="img"><shadow type="screen_image_picker"><field name="img">img`
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+`</field></shadow></value><value name="kind"><shadow type="spritekind"><field name="MEMBER">Player</field></shadow></value></block></value></block></next></block></statement></block><block type="gameinterval" x="10" y="270"><value name="period"><shadow type="timePicker"><field name="ms">1000</field></shadow></value><statement name="HANDLER"><block type="variables_set"><field name="VAR" id="CO{]WI|*?w=M(yPk]-j=">projectile</field><value name="VALUE"><shadow xmlns="http://www.w3.org/1999/xhtml" type="math_number"><field name="NUM">0</field></shadow><block type="spritescreateprojectilefromsprite"><value name="img"><shadow type="screen_image_picker"><field name="img">img`
+. . . . . . . . . . . . . . . . 
+. . . . . e e . . . . . . . . . 
+. . . . . . e e . . . . . . . . 
+. . . . . . . e . . . . . . . . 
+. . . . . 5 f 5 f 5 . . . . . . 
+. . . . . 5 f 5 f 5 2 2 . . . . 
+. . e f f 5 f 5 f 5 2 e . . . . 
+. . . . . 5 f 5 f 5 2 2 . . . . 
+. . . . . 5 f 5 f 5 . . . . . . 
+. . . . . . . e . . . . . . . . 
+. . . . . . e e . . . . . . . . 
+. . . . . e e . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+`</field></shadow></value><value name="sprite"><block type="variables_get"><field name="VAR" id="Wipg4-cd);a]ovZ6LlfN">mySprite</field></block></value><value name="vx"><shadow type="spriteSpeedPicker"><field name="speed">50</field></shadow><block type="device_random"><value name="min"><shadow type="math_number"><field name="NUM">-25</field></shadow></value><value name="limit"><shadow type="math_number"><field name="NUM">25</field></shadow></value></block></value><value name="vy"><shadow type="spriteSpeedPicker"><field name="speed">100</field></shadow><block type="device_random"><value name="min"><shadow type="math_number"><field name="NUM">-25</field></shadow></value><value name="limit"><shadow type="math_number"><field name="NUM">25</field></shadow></value></block></value></block></value><next><block type="Sprite_blockCombine_set"><field name="property">Sprite.lifespan</field><value name="mySprite"><block type="variables_get"><field name="VAR" id="CO{]WI|*?w=M(yPk]-j=">projectile</field></block></value><value name="value"><shadow type="math_number"><field name="NUM">3000</field></shadow></value><next><block type="controls_if"><value name="IF0"><shadow type="logic_boolean"><field name="BOOL">TRUE</field></shadow><block type="logic_compare"><field name="OP">LT</field><value name="A"><shadow type="math_number"><field name="NUM">0</field></shadow><block type="Sprite_blockCombine_get"><field name="property">Sprite.vx</field><value name="mySprite"><block type="variables_get"><field name="VAR" id="CO{]WI|*?w=M(yPk]-j=">projectile</field></block></value></block></value><value name="B"><shadow type="math_number"><field name="NUM">0</field></shadow></value></block></value><statement name="DO0"><block type="Image_flipX"><value name="picture"><block type="spriteimage"><value name="sprite"><block type="variables_get"><field name="VAR" id="CO{]WI|*?w=M(yPk]-j=">projectile</field></block></value></block></value></block></statement></block></next></block></next></block></statement></block></xml>
